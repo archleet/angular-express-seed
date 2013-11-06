@@ -2,6 +2,8 @@
 
 // Declare app level module which depends on filters, and services
 
+// Connect routes, views and controllers
+
 angular.module('myApp', [
   'myApp.controllers',
   'myApp.filters',
@@ -12,23 +14,23 @@ config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'partials/index',
-      controller: 'IndexCtrl'
+      controller: IndexCtrl
     }).
     when('/addPost', {
       templateUrl: 'partials/addPost',
-      controller: 'AddPostCtrl'
+      controller: AddPostCtrl
     }).
     when('/readPost/:id', {
       templateUrl: 'partials/readPost',
-      controller: 'ReadPostCtrl'
+      controller: ReadPostCtrl
     }).
     when('/editPost/:id', {
       templateUrl: 'partials/editPost',
-      controller: 'EditPostCtrl'
+      controller: EditPostCtrl
     }).
     when('/deletePost/:id', {
       templateUrl: 'partials/deletePost',
-      controller: 'DeletePostCtrl'
+      controller: DeletePostCtrl
     }).
     otherwise({
       redirectTo: '/'
@@ -36,3 +38,7 @@ config(function ($routeProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true);
 });
+
+
+
+
